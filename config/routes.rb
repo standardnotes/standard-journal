@@ -6,5 +6,7 @@ Rails.application.routes.draw do
 
   get ":path" => "posts#show"
 
+  get 'posts/feed' => 'posts#feed', :format => 'rss'
+
   root :to => "posts#index"
 end

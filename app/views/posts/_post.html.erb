@@ -1,11 +1,17 @@
 <div class="post">
 
   <div class="post-title">
-    <%= post.title %>
+    <a href="<%= post.path %>">
+      <%= post.title %>
+    </a>
+  </div>
+
+  <div class="post-date">
+    <%= post.created_at.strftime("%B %e, %Y") %>
   </div>
 
   <div class="post-content">
-    <%= post.content %>
+    <%= simple_format(post.content) %>
   </div>
 
 </div>

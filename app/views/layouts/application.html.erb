@@ -1,16 +1,46 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>StandardJournal</title>
-    <%= csrf_meta_tags %>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
 
+    <% if @post %>
+      <% @title = @post.title %>
+      <% @desc = @post.content.slice(0, 200) + "..." %>
+    <% else %>
+      <% @title = BLOG_CONFIG["title"] %>
+      <% @desc = BLOG_CONFIG["desc"] %>
+    <% end %>
+
+    <title><%= @title %></title>
+    <meta content="<%= @desc %>" name="description"/>
+
+    <!-- Apple -->
+    <meta content="<%= @title %>" name="apple-mobile-web-app-title"/>
+    <meta content="<%= @title %>" name="application-name"/>
+
+    <!-- Twitter -->
+    <meta content="<%= @desc %>" name="twitter:description"/>
+    <meta content="<%= @title %>" name="twitter:title"/>
+    <meta content="BLOG_CONFIG["twitter"]" name="twitter:site"/>
+    <meta content="summary" name="twitter:card"/>
+
+    <!-- Facebook -->
+    <meta content="<%= @title %>" name="og:title"/>
+    <meta content="<%= @title %>" name="og:description"/>
+
+    <%= csrf_meta_tags %>
+    <%= auto_discovery_link_tag( :rss, {:controller => "posts", :action => "feed"} ) %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <div id="container"
-      <%= yield %>
+    <div id="main-container">
+      <%= render :partial => 'layouts/header' %>
+      <div id="posts-container">
+        <%= yield %>
+      </div>
+      <%= render :partial => 'layouts/footer' %>
     </div>
   </body>
 </html>

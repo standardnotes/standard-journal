@@ -1,0 +1,29 @@
+<div class="header">
+  <div class="header-content">
+
+    <div class="left-side">
+      <div class="title">
+        <a href="/">
+          <%= BLOG_CONFIG["title"] %>
+        </a>
+      </div>
+      <div class="title-author-rule"></div>
+      <div class="author">
+        <a href="<%= BLOG_CONFIG["author_link"] %>" target="_blank">
+          <%= BLOG_CONFIG["author_text"] %>
+        </a>
+      </div>
+    </div>
+
+    <div class="right-side">
+      <% BLOG_CONFIG["links"].each do |link| %>
+        <div class="link">
+          <a href="<%= link["url"] %>">
+            <%= link["name"] %>
+          </a>
+        </div>
+      <% end %>
+    </div>
+
+  </div>
+</div>

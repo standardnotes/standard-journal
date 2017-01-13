@@ -10,17 +10,49 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- *= require_tree .
- *= require_self
  */
 
-body {
+@import "variables";
+@import "posts";
+@import "footer";
+@import "header";
+
+html, body {
  font-family: georgia, "times new roman", times, serif;
+ -webkit-font-smoothing: antialiased;
+ margin: 0;
+ padding: 0;
+ height: 100%;
 }
 
-#container {
-    width: 625px;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
+#main-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100%;
+}
+
+#posts-container {
+  width: $content-width;
+  margin-top: 70px;
+  margin-left: auto;
+  margin-right: auto;
+
+  -webkit-box-flex: 1;
+    -ms-flex: 1;
+        flex: 1;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: underline;
+  cursor: pointer;
 }

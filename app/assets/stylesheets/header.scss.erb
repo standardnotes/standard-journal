@@ -1,0 +1,62 @@
+.header {
+  background-color: #<%= BLOG_CONFIG["background_color"] %>;
+  // br required between these two elements for some reason
+  color: #<%= BLOG_CONFIG["foreground_color"] %>;
+
+  a {
+    color: #<%= BLOG_CONFIG["foreground_color"] %>;
+  }
+
+  font-family: sans-serif;
+
+  height: 80px;
+  overflow: hidden;
+
+  .header-content {
+    width: 1100px;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 25px;
+  }
+
+  .left-side {
+    height: 100%;
+    float: left;
+
+    .title {
+      display: inline-block;
+      vertical-align: middle;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .title-author-rule {
+      display: inline-block;
+      vertical-align: middle;
+      height: 40%;
+      width: 2px;
+      background-color: #<%= BLOG_CONFIG["foreground_color"] %>;
+      margin: 0 10px;
+      opacity: 0.7;
+    }
+
+    .author {
+      display: inline-block;
+      vertical-align: middle;
+      font-size: 12px;
+    }
+  }
+
+  .right-side {
+    float: right;
+    padding-top: 7px;
+    .link {
+      display: inline-block;
+      margin-right: 10px;
+      font-weight: bold;
+      font-size: 16px;
+    }
+  }
+
+}

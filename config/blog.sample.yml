@@ -1,0 +1,15 @@
+foreground_color: "ffffff"
+background_color: "624dd7"
+title: My Journal
+desc: A journal on technology and startups.
+url: <%= ENV['HOST'] %>
+author_name: Jon Snow
+author_text: by Jon Snow
+author_link: https://twitter.com/winteriscoming
+twitter: https://twitter.com/winteriscoming
+
+links:
+  - name: Photos
+    url: <%= ENV['HOST'] %>/photos
+  - name: About
+    url: <%= ENV['HOST'] %>/about
