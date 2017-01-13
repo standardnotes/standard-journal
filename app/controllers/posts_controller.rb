@@ -24,4 +24,23 @@ class PostsController < ApplicationController
    end
  end
 
+ def toggle_like
+   uuid = params[:uuid]
+   post = Post.find_by_uuid(uuid)
+   key = "liked_#{uuid}"
+   value = session[key]
+
+   if value == nil || value == false
+     session[key] = true
+     post.like_count += 1
+   else
+     session[key] = false
+     post.like_count -= 1
+   end
+
+   post.save
+
+   render :json => {:liked => session[key], :like_count => post.like_count}
+ end
+
 end

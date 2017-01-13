@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
-  protect_from_forgery with: :null_session
+  # protect_from_forgery with: :null_session
 
   def render_404
     respond_to do |format|
@@ -8,5 +8,5 @@ class ApplicationController < ActionController::Base
       format.any  { head :not_found }
     end
   end
-  
+
 end

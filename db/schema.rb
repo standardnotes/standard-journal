@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170112224218) do
+ActiveRecord::Schema.define(version: 20170113223743) do
 
   create_table "posts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "uuid"
@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 20170112224218) do
     t.boolean  "published",                default: true
     t.datetime "created_at",                              null: false
     t.datetime "updated_at",                              null: false
+    t.integer  "like_count",               default: 0
   end
 
 end

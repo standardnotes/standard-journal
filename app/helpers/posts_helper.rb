@@ -22,4 +22,10 @@ module PostsHelper
 
     return markdown.render(text)
   end
+
+  def liked_by_current_user(post)
+    key = "liked_#{post.uuid}"
+    return session[key]
+  end
+
 end
