@@ -1,6 +1,13 @@
 class PostsController < ApplicationController
+
+  def published_posts
+    posts = Post.where(:published => true).all
+    posts = posts.reject { |e| BLOG_CONFIG["hidden_posts"].include? e.path  }
+    posts
+  end
+
   def index
-    @posts = Post.where(:published => true).all
+    @posts = published_posts
   end
 
   def show
@@ -11,7 +18,7 @@ class PostsController < ApplicationController
   end
 
   def feed
-   @posts = Post.where(:published => true).all
+   @posts = published_posts
    respond_to do |format|
      format.rss { render :layout => false }
    end

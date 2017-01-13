@@ -6,12 +6,14 @@
     </a>
   </div>
 
-  <div class="post-date">
-    <%= post.created_at.strftime("%B %e, %Y") %>
-  </div>
+  <% if post.show_date == true %>
+    <div class="post-date">
+      <%= post.created_at.strftime("%B %e, %Y") %>
+    </div>
+  <% end %>
 
   <div class="post-content">
-    <%= simple_format(post.content) %>
+    <%= post.rendered_content %>
   </div>
 
 </div>
