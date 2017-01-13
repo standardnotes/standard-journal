@@ -13,3 +13,7 @@ links:
     url: <%= ENV['HOST'] %>/photos
   - name: About
     url: <%= ENV['HOST'] %>/about
+
+hidden_posts:
+  - photography
+  - about
