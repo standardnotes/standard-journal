@@ -50,12 +50,12 @@ class ExtensionController < ApplicationController
       params_string = input.string_between_markers("<params>", "</params>")
       if params_string
         params_string = "<params>" + params_string + "</params>"
-        params = Hash.from_xml(params_string.gsub("\n", ""))
+        params = Hash.from_xml(params_string.gsub("\n", ""))["params"]
         input.slice! params_string
       end
     end
 
-    return input, params["params"]
+    return input, params
   end
 
 end
