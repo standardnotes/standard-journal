@@ -11,12 +11,14 @@
 
   height: 80px;
   overflow: hidden;
+  width: 100%;
 
   .header-content {
-    width: 1100px;
+    max-width: 1100px;
     height: 100%;
     margin-left: auto;
     margin-right: auto;
+    padding: 0 20px;
     padding-top: 25px;
   }
 
@@ -45,6 +47,10 @@
       display: inline-block;
       vertical-align: middle;
       font-size: 12px;
+
+      @include MQ-Xsmall() {
+        display: none;
+      }
     }
   }
 

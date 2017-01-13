@@ -37,14 +37,23 @@ html, body {
 }
 
 #posts-container {
-  width: $content-width;
+  max-width: $content-width;
   margin-top: 70px;
   margin-left: auto;
   margin-right: auto;
+  padding: 0 20px;
 
   -webkit-box-flex: 1;
     -ms-flex: 1;
         flex: 1;
+
+  @include MQ-Xsmall() {
+    margin-top: 10px !important;
+  }
+
+  @include MQ-Small() {
+    margin-top: 10px !important;
+  }
 }
 
 a {
