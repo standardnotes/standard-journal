@@ -13,6 +13,9 @@
 
 blog.yml
 .env
+cap.yml
+
+.ssh
 
 # Ignore all logfiles and tempfiles.
 /log/*

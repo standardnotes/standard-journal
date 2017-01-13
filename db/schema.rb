@@ -12,14 +12,14 @@
 
 ActiveRecord::Schema.define(version: 20170112224218) do
 
-  create_table "posts", force: :cascade do |t|
+  create_table "posts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "uuid"
     t.string   "title"
-    t.text     "content"
+    t.text     "content",    limit: 65535
     t.string   "path"
-    t.boolean  "published",  default: true
-    t.datetime "created_at",                null: false
-    t.datetime "updated_at",                null: false
+    t.boolean  "published",                default: true
+    t.datetime "created_at",                              null: false
+    t.datetime "updated_at",                              null: false
   end
 
 end
