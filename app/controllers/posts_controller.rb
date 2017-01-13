@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
 
   def published_posts
-    posts = Post.where(:published => true).all
+    posts = Post.where(:published => true).order("created_at desc").all
     posts = posts.reject { |e| BLOG_CONFIG["hidden_posts"].include? e.path  }
     posts
   end
