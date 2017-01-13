@@ -32,13 +32,20 @@ class ExtensionController < ApplicationController
 
     items.each do |item|
       post = Post.find_or_create_by(uuid: item[:uuid])
+
       post.title = item[:content][:title]
+
       content, params = content_and_params(item[:content][:text])
       post.content = content
-      post.update(params)
+
       if post.path == nil
         post.path = post.title.parameterize
       end
+
+      if params
+        post.update(params)
+      end
+
       post.save
     end
 
