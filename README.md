@@ -6,7 +6,7 @@ Standard Journal is a simple blog that's based off your Standard Notes.
 
 You publish notes to your blogs via an extension that you add to Standard Notes:
 
-![extension](https://s3.amazonaws.com/bitario/misc/sj-ext.png)
+<img src="https://s3.amazonaws.com/bitario/misc/sj-ext.png" width="425"/>
 
 For a live demo, see [bitar.io](https://bitar.io).
 
