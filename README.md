@@ -43,6 +43,23 @@ Installation and configuration is easy.
 	  - about
 	
 	```
+	
+2. Create a file called `.env` with the following contents:
+
+	```
+	SECRET=some secret here
+	HOST=http://localhost:3003
+	SECRET_KEY_BASE=use "bundle exec rake secret"
+	
+	DB_HOST=127.0.0.1
+	DB_PORT=3306
+	DB_DATABASE=sn_blog
+	DB_USERNAME=root
+	DB_PASSWORD=
+	```
+	
+	You should change the contents of this file depending on your environment. If launching to a production environment, use your domain name for host and production database credentials.
+
 
 2. Create a file in the config folder called `cap.yml` with the following contents:
 
@@ -69,6 +86,8 @@ Installation and configuration is easy.
 3. Run `bundle install`
 4. Run `cap production deploy`
 
-And that's it. 
+And that's it.
+
+To access your extension from Standard Notes, simply type in your extension's URL, which is `https://yourdomain.com/ext/secret_from_env_file`.
 
 Obviously this is assuming you have an environment set up on your server and a web server that can respond to requests at your domain. This is beyond the scope of this example. However, for general instructions on launching a Ruby server, see [this guide](https://github.com/standardfile/ruby-server/wiki/Deploying-a-private-Standard-File-server-with-Amazon-EC2-and-Nginx).
