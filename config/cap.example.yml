@@ -1,6 +1,6 @@
 default: &default
   key_path: /path/to/key.pem
-  repo_url: https://github.com/standardnotes/ruby-server.git
+  repo_url: https://github.com/standardnotes/standard-journal.git
   user: ssh_username
 
 staging:

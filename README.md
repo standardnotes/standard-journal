@@ -12,7 +12,7 @@ For a live demo, see [bitar.io](https://bitar.io).
 
 Presently, to use this extension, you have to install it on your own server. However, we are exploring making this available as a service that allows us to host a blog for you with just one click.
 
-Installation and configuration is really easy.
+Installation and configuration is easy.
 
 ## Installation
 
