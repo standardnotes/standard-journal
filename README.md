@@ -91,3 +91,7 @@ And that's it.
 To access your extension from Standard Notes, simply type in your extension's URL, which is `https://yourdomain.com/ext/secret_from_env_file`.
 
 Obviously this is assuming you have an environment set up on your server and a web server that can respond to requests at your domain. This is beyond the scope of this example. However, for general instructions on launching a Ruby server, see [this guide](https://github.com/standardfile/ruby-server/wiki/Deploying-a-private-Standard-File-server-with-Amazon-EC2-and-Nginx).
+
+## License
+
+Licensed under the GPLv3: http://www.gnu.org/licenses/gpl-3.0.html
