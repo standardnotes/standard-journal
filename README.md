@@ -1,6 +1,6 @@
 # Standard Journal
 
-Standard Journal is a simple blog that's based off your Standard Notes. 
+Standard Journal is a simple blog that's based off your Standard Notes.
 
 ![bitario-blog](https://s3.amazonaws.com/bitario/misc/bitario-blog.png)
 
@@ -28,36 +28,33 @@ Installation and configuration is easy.
 	author_text: by Jon Snow
 	author_link: https://twitter.com/winteriscoming
 	twitter: https://twitter.com/winteriscoming
-	
-	# Google Analytics
-	ga_tracking_id: UA-83445137-2
-	
+
 	links:
 	  - name: Photos
 	    url: <%= ENV['HOST'] %>/photos
 	  - name: About
 	    url: <%= ENV['HOST'] %>/about
-	
+
 	hidden_posts:
 	  - photography
 	  - about
-	
+
 	```
-	
+
 2. Create a file called `.env` with the following contents:
 
 	```
 	SECRET=some secret here
 	HOST=http://localhost:3003
 	SECRET_KEY_BASE=use "bundle exec rake secret"
-	
+
 	DB_HOST=127.0.0.1
 	DB_PORT=3306
 	DB_DATABASE=sn_blog
 	DB_USERNAME=root
 	DB_PASSWORD=
 	```
-	
+
 	You should change the contents of this file depending on your environment. If launching to a production environment, use your domain name for host and production database credentials.
 
 
@@ -68,13 +65,13 @@ Installation and configuration is easy.
 	  key_path: /path/to/key.pem
 	  repo_url: https://github.com/standardnotes/standard-journal.git
 	  user: ssh_username
-	
+
 	staging:
 	  <<: *default
 	  server: staging.yourdomain.com
 	  branch: staging
 	  deploy_to: ~/standard-journal-staging
-	
+
 	production:
 	  <<: *default
 	  server: yourdomain.com

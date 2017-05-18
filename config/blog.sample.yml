@@ -8,9 +8,6 @@ author_text: by Jon Snow
 author_link: https://twitter.com/winteriscoming
 twitter: https://twitter.com/winteriscoming
 
-# Google Analytics
-ga_tracking_id: UA-83445137-2
-
 links:
   - name: Photos
     url: <%= ENV['HOST'] %>/photos
